@@ -1,0 +1,4 @@
+###### Requirements to run LPR model, currently without versions ######
+tensorflow
+numpy
+matplotlib
