@@ -27,7 +27,7 @@ Coming soon!
 
 ## Pre-trained Models
 
-A resnet101 model, pretrained on ImageNet
+A resnet101 pretrained on ImageNet
 
 
 ## Results
