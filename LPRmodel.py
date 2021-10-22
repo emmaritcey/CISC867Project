@@ -171,7 +171,6 @@ def biseNet(image, numClass1, numClass2):
     
 '''
 final step, performs classification of characters
-need to finish/fix one step to complete
 don't know filters, stride values yet
 '''
 def sharedClassifier(inputs):
@@ -212,7 +211,7 @@ def main():
     pos_att_map = softmax(pos_features)
     semantic_output = layers.BatchNormalization()(sem_features)
     
-
+    # NEED TO FIGURE OUT HOW THIS MULTIPLICATION PROCESS WORKS TO GET CORRECT DIMENSIONS FOR SHARED CLASSIFIER
     # #element-wise multiplication, position attention map of each character is used to 
     # # modulate the semantic features separately
     # #remove background layer from pos_att_map prior to multiplication (I think this is the last layer?)
