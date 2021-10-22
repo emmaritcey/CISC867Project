@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 ## Training
-The model architecture can be viewed in LPRmodel.py
+The model architecture can be viewed in LPRmodel.py /n
 Details on how to train the model will be available soon.
 
 
