@@ -180,9 +180,13 @@ def sharedClassifier(inputs):
     #input the result from multiplying semantic_output and pos_att_map
     x = conv_bn_relu(input=inputs, filters=5, kernel_size=(5,5), strides=(1,1), padding='same')(inputs)
     #global pooling
-    x = layers.GlobalAveragePooling2D(keepdims=True)(x)
+    x = layers.GlobalAveragePooling2D(keepdims=False)(x)
     #fully connected layer for classification
     output = layers.Dense(35)(x)
+    
+    prediction_indices = tf.math.argmax(output, axis=1, output_type=tf.dtypes.int64, name=None)
+    
+    return prediction_indices
 
 def main():
     
@@ -211,16 +215,22 @@ def main():
     pos_att_map = softmax(pos_features)
     semantic_output = layers.BatchNormalization()(sem_features)
     
-    # NEED TO FIGURE OUT HOW THIS MULTIPLICATION PROCESS WORKS TO GET CORRECT DIMENSIONS FOR SHARED CLASSIFIER
-    # #element-wise multiplication, position attention map of each character is used to 
-    # # modulate the semantic features separately
-    # #remove background layer from pos_att_map prior to multiplication (I think this is the last layer?)
-    # for i in range(0,num_positions):
-    #     #multiply ith slice of pos_att_map by some part of semantic_output tensor
-    #     #create final_inputs in this loop
-    #     final_inputs = [] # for now
+
+    #element-wise multiplication, position attention map of each character is used to 
+    # modulate the semantic features separately
+    #remove background layer from pos_att_map prior to multiplication (I think this is the last layer?)
+    product = np.zeros((7,35,28,28))
+    for idx in range(0,num_positions):
+      #multiply ith slice of pos_att_map by some part of semantic_output tensor
+      for jdx in range(0, num_classes):
+        layer = tf.math.multiply(pos_att_map[:,:,:,idx], semantic_output[:,:,:,jdx])
+        product[idx,jdx,:,:] = layer
+        
+    product = tf.convert_to_tensor(product)
+
         
         
-    # sharedClassifier(final_inputs)
+    prediction_indices = sharedClassifier(final_inputs)
+    ###NEED TO CONVERT THE INDICES TO CHARACTERS/NUMBERS
 
 main()
