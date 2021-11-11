@@ -15,6 +15,9 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
+## Preprocessing
+Use plate_extractor1.py or plate_extractor2.py to extract just the license plate from the AOLP images
+
 ## Training
 The model architecture can be viewed in LPRmodel.py 
 
