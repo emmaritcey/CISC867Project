@@ -99,7 +99,7 @@ def feature_fusion_module(num_classes, input1, input2):
 
 def context_path(image):
     print('In context path')
-    inputs = Input(shape=(224, 224, 3))
+    inputs = Input(shape=(50, 160, 3))
     resnet_model = ResNet101(weights='imagenet',input_tensor=inputs, include_top=False)
     
     features_list = [layer.output for layer in resnet_model.layers]
