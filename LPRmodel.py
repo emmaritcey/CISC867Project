@@ -229,7 +229,7 @@ def main():
         layer = tf.math.multiply(pos_att_map[:,:,:,idx], semantic_output[:,:,:,jdx])
         product[idx,jdx,:,:] = layer
         
-    product = tf.convert_to_tensor(product)
+    final_inputs = tf.convert_to_tensor(product)
 
         
         
