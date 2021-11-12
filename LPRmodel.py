@@ -222,7 +222,7 @@ def main():
     #element-wise multiplication, position attention map of each character is used to 
     # modulate the semantic features separately
     #remove background layer from pos_att_map prior to multiplication (I think this is the last layer?)
-    product = np.zeros((7,35,28,28))
+    product = np.zeros((7,35,8,20))
     for idx in range(0,num_positions):
       #multiply ith slice of pos_att_map by some part of semantic_output tensor
       for jdx in range(0, num_chars):
