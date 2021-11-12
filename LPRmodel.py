@@ -181,7 +181,7 @@ def sharedClassifier(inputs):
     #Shared Classifier:
     #5x5 convolution, batch norm, ReLU (verify parameter values later)
     #input the result from multiplying semantic_output and pos_att_map
-    x = conv_bn_relu(input=inputs, filters=5, kernel_size=(5,5), strides=(1,1), padding='same')(inputs)
+    x = conv_bn_relu(input=inputs, filters=5, kernel_size=(5,5), strides=(1,1), padding='same')
     #global pooling
     x = layers.GlobalAveragePooling2D(keepdims=False)(x)
     #fully connected layer for classification
