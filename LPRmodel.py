@@ -153,8 +153,11 @@ def visualize_features(features):
 
 def biseNet(image, numClass1, numClass2):
     print('In BiSeNet')
+    #manually pad image for spatial path for proper dimensions
+    paddings = tf.constant([[0,0],[7, 7], [0, 0],[0,0]])
+    padded_image = tf.pad(image, paddings, "CONSTANT")
     #image sent into spatial and context paths
-    sp = spatial_path(image) 
+    sp = spatial_path(padded_image) 
     cp = context_path(image)
     
     #get semantic features by calling FFM with 35 classes
