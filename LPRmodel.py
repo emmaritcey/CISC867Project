@@ -225,7 +225,7 @@ def main():
     product = np.zeros((7,35,28,28))
     for idx in range(0,num_positions):
       #multiply ith slice of pos_att_map by some part of semantic_output tensor
-      for jdx in range(0, num_classes):
+      for jdx in range(0, num_chars):
         layer = tf.math.multiply(pos_att_map[:,:,:,idx], semantic_output[:,:,:,jdx])
         product[idx,jdx,:,:] = layer
         
