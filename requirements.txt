@@ -1,4 +1,7 @@
-###### Requirements to run LPR model, currently without versions ######
+###### Requirements to run LPR model ######
 tensorflow
 numpy
 matplotlib
+opencv-python
+scikit-learn
+git+https://github.com/qubvel/classification_models.git
