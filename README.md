@@ -41,11 +41,11 @@ All the image files and label files can be saved in npy files<br>
 Use plate_extractor1.py or plate_extractor2.py to extract just the license plate from the AOLP images
 
 ## Training
-The model architecture can be viewed in LPRmodel.py 
+The model architecture can be viewed in LPRmodel.py <br>
     - line 20: choose base model to use (resnet101, 50, 34, or 18)
 
 To train, run:
-python lpr_train
+python lpr_train <br>
     - lines 12-17: alter datasets to train on prior to running if needed 
 
 
