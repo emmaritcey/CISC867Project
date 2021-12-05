@@ -61,8 +61,24 @@ The model uses a ResNet model pretrained on ImageNet dataset. Can choose to use 
 
 ## Results
 
-| Model name         |  AC  |  LE  |  RP  |
-| ------------------ |------ ------ ------| | -------------- |
-| LPR with ResNet101 |            |      95%       |
+|     Model name     |    AC    |    LE    |    RP    |
+| ------------------ |----------|----------|----------|
+| LPR with ResNet101 |  72.72%  |  73.35%  |  52.40%  |
 
 
+## References
+
+@inproceedings{zhang2021efficient,
+  title={Efficient License Plate Recognition via Holistic Position Attention},
+  author={Zhang, Yesheng and Wang, Zilei and Zhuang, Jiafan},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2021}
+}
+
+@inproceedings{AOLP2013,
+  title={Application-Oriented License Plate Recognition},
+  author={Hsu, G.S.; Chen, J.C.; Chung, Y.Z.},
+  booktitle={Vehicular Technology, IEEE Transactions on , vol.62, no.2},
+  pages={552-561},
+  year={2013}
+}
