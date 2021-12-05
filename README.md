@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 ## Data Preparation and Preprocessing
-You need to download the [AOLP](http://aolpr.ntust.edu.tw/lab/) datasets.<br>
+Download the [AOLP](http://aolpr.ntust.edu.tw/lab/) datasets.<br>
 
 The plates char need to be converted to pure number format<br>
 
