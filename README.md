@@ -44,14 +44,14 @@ Use plate_extractor1.py or plate_extractor2.py to extract just the license plate
 The model architecture can be viewed in LPRmodel.py <br>
     - line 20: choose base model to use (resnet101, 50, 34, or 18)
 
-To train, run:
+To train, run: <br>
 python lpr_train <br>
     - lines 12-17: alter datasets to train on prior to running if needed 
 
 
 ## Evaluation
-To test and evaluate the trained model, run:
-python lpr_test
+To test and evaluate the trained model, run: <br>
+python lpr_test <br>
     - lines 11,12: load appropriate dataset to test on (test on third AOLP dataset not used for training)
 
 
