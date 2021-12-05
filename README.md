@@ -17,10 +17,10 @@ pip install -r requirements.txt
 
 ## Data Preparation and Preprocessing
 Download the [AOLP](http://aolpr.ntust.edu.tw/lab/) datasets.<br>
+The plates char need to be converted to pure number format.<br>
 
-The plates char need to be converted to pure number format<br>
-
-All the image files and label files can be saved in npy files<br>
+To extract just the license plate from the AOLP images, run: python plate_extractor1.py or python plate_extractor2.py 
+To obtain .npy files which contain the label data and image data in pure number format to use for training and testing, run python prepare_npy_datafile_for_AOLP_AC.py, python prepare_npy_datafile_for_AOLP_LE.py, and python prepare_npy_datafile_for_AOLP_RP.py. This will save the label and image .npy files in the data directory as shown below:
 <pre>
 ├── data  
 │     ├── AOLP_AC_plate_images.npy  
@@ -29,12 +29,9 @@ All the image files and label files can be saved in npy files<br>
 │     ├── AOLP_LE_plate_labels_in_number.npy  
 │     ├── AOLP_RP_plate_images.npy  
 │     ├── AOLP_RP_plate_labels_in_number.npy  
-│     ├── AOLP_noSkew_plate_images.npy  
-│     └── AOLP_noSkew_plate_labels_in_number.npy
 
 </pre>
 
-Use plate_extractor1.py or plate_extractor2.py to extract just the license plate from the AOLP images
 
 ## Training
 The model architecture can be viewed in LPRmodel.py <br>
