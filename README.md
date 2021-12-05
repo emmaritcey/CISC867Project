@@ -36,6 +36,7 @@ All the image files and label files can be saved in npy files<br>
 │     ├── AOLP_noSkew_plate_images.npy  
 │     └── AOLP_noSkew_plate_labels_in_number.npy
 
+</pre>
 
 Use plate_extractor1.py or plate_extractor2.py to extract just the license plate from the AOLP images
 
