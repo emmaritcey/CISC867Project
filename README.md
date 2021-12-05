@@ -3,8 +3,8 @@
 >📋  A template README.md for code accompanying a Machine Learning paper
 
 # CISC867Project
-
-This repository is the reproduced implementation of [Efficient License Plate Recognition via Holistic Position Attention](https://ojs.aaai.org/index.php/AAAI/article/view/16457). 
+This is a re-implementation of VIM-LPR for paper "Efficient License Plate Recognition via Holistic Position Attention"(AAAI2021) using tensorflow.
+This code is based on jfzhuang's VIM-LPR
 
 
 ## Requirements
