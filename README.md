@@ -22,11 +22,7 @@ The plates char need to be converted to pure number format<br>
 
 All the image files and label files can be saved in npy files<br>
 <pre>
-├── data
-│     ├── AOLP_noSkew
-│     │     ├── label_in_number
-│     │     └── image
-│     │   
+├── data  
 │     ├── AOLP_AC_plate_images.npy  
 │     ├── AOLP_AC_plate_labels_in_number.npy
 │     ├── AOLP_LE_plate_images.npy  
