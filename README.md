@@ -54,9 +54,9 @@ The model uses a ResNet model pretrained on ImageNet dataset. Can choose to use 
 
 ## Results
 
-|     Model name     |    AC    |    LE    |    RP    |
-| ------------------ |----------|----------|----------|
-| LPR with ResNet101 |  72.72%  |  73.35%  |  52.40%  |
+|     Model name      |    AC    |    LE    |    RP    |
+| ------------------- |----------|----------|----------|
+| LPR with ResNet-101 |  72.72%  |  73.35%  |  52.40%  |
 
 
 ## References
